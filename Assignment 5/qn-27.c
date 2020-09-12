@@ -10,7 +10,8 @@ void squeeze(char s[],char ch)
   {
     if(s[i]!=ch)
    {
-      newstr[j]=s[i];j++;
+      newstr[j]=s[i];
+      j++;
    }       
   }
  
