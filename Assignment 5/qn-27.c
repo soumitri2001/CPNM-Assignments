@@ -4,18 +4,25 @@
 const int MAX=1e5+5;
 
 void squeeze(char s[],char ch)
-{char newstr[MAX]; int i=0,j=0;
- for(i=0;s[i]!='\0';i++)
- {if(s[i]!=ch)
-  {newstr[j]=s[i];j++;}       
- }
- for(i=0;newstr[i]!='\0';i++)
- s[i]=newstr[i];     
- s[i]='\0';
+{
+  char newstr[MAX]; int i=0,j=0;
+  for(i=0;s[i]!='\0';i++)
+  {
+    if(s[i]!=ch)
+   {
+      newstr[j]=s[i];j++;
+   }       
+  }
+ 
+  for(i=0;newstr[i]!='\0';i++)
+   s[i]=newstr[i];   
+ 
+  s[i]='\0';
 }
 
 int main()
-{ char str[MAX],c;
+{ 
+  char str[MAX],c;
   printf("Enter the string:\n");
   gets(str);
   printf("Enter the character whose occurrence is to be removed : ");
@@ -24,5 +31,5 @@ int main()
   printf("The modified string is : ");
   printf("%s",str);
   
-return 0;    
+ return 0;    
 }
